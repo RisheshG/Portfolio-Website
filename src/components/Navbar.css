@@ -1,0 +1,90 @@
+/* src/components/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem; /* Slimmer padding */
+  background-color: #111; /* Darker background */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  position: fixed;
+  top: 0;
+  width: calc(100% - 2rem); /* Reduced width */
+  margin: 0 auto; /* Center horizontally */
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+  background-color: #222; /* Slightly lighter background on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Increased shadow on hover */
+}
+
+.logo {
+  color: #fff; /* White text color */
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logo:hover {
+  color: #f57f20; /* Orange color on hover */
+  transform: scale(1.05);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem; /* Adjusted gap */
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #fff; /* White text color */
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #fff; /* White text color on hover */
+  background-color: rgba(245, 127, 32, 0.2); /* Orange background on hover */
+}
+
+.nav-links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f57f20; /* Orange underline */
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem;
+    width: 100%; /* Full width on small screens */
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem; /* Adjusted gap for smaller screens */
+    margin-top: 0.5rem;
+  }
+  
+  .nav-links a {
+    padding: 0.75rem; /* Adjusted padding for smaller screens */
+  }
+}

@@ -1,0 +1,41 @@
+/* src/App.css */
+:root {
+  --bg-color: #000; /* Black background */
+  --text-color: #fff; /* White text color */
+  --primary-color: #f57f20; /* Orange accent color */
+}
+
+[data-theme='light'] {
+  --bg-color: #fff; /* White background for light theme */
+  --text-color: #000; /* Black text color for light theme */
+  --primary-color: #ff7e5f; /* Lighter orange for light theme */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 90%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,111 @@
+/* src/sections/Projects.css */
+.projects {
+  padding: 6rem 2rem; /* Increased padding for a more spacious feel */
+  background-color: #1a1a1a; /* Slightly darker background for improved contrast */
+  color: #e0e0e0; /* Light text color for readability */
+  text-align: center;
+  position: relative;
+  border-top: 8px solid #00bcd4; /* Thicker bright cyan top border */
+  border-bottom: 8px solid #00bcd4; /* Thicker bright cyan bottom border */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* More pronounced shadow effect */
+}
+
+.projects h2 {
+  font-size: 3.5rem; /* Larger heading for better emphasis */
+  margin-bottom: 3rem; /* More space below the heading */
+  color: #00bcd4; /* Cyan color for the heading */
+  text-transform: uppercase; /* Uppercase text for emphasis */
+  letter-spacing: 2px; /* Increased letter spacing for a more refined look */
+  font-weight: 700; /* Bold text */
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Increased space between cards */
+}
+
+.project-card {
+  perspective: 1500px; /* Greater depth effect for 3D */
+  width: 300px; /* Increased width */
+  height: 250px; /* Increased height */
+  border-radius: 15px; /* More rounded corners */
+  overflow: hidden; /* Ensures content doesn't overflow */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Prominent shadow */
+  transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out; /* Smoother transitions */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card:hover {
+  transform: scale(1.05) rotateY(5deg); /* Slightly enlarged and tilted on hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.project-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .project-card-inner {
+  transform: rotateY(180deg);
+}
+
+.project-card-front,
+.project-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px; /* Match card corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem; /* Increased padding for better content spacing */
+  box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+}
+
+.project-card-front {
+  background: linear-gradient(135deg, #ff6f61, #ffcc70); /* Softer gradient background */
+  color: #fff;
+  font-size: 1.2rem; /* Larger font size */
+  font-weight: 600; /* Emphasized text */
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card-back {
+  background: linear-gradient(135deg, #00bcd4, #009688); /* Cyan gradient for back */
+  transform: rotateY(180deg);
+  color: #fff;
+  font-size: 1.1rem; /* Adjusted font size */
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card-back p {
+  margin: 0;
+  padding: 1.5rem; /* Increased padding */
+  text-align: center;
+  flex: 1; /* Ensure paragraph takes available space */
+  font-size: 1rem; /* Adjusted font size */
+}
+
+.project-card-back a {
+  color: #fff;
+  text-decoration: none; /* Remove underline */
+  margin-top: 15px;
+  font-weight: 600; /* Bold link text */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+.project-card-back a:hover {
+  color: #00bcd4; /* Cyan color on hover */
+}

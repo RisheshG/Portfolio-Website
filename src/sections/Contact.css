@@ -1,0 +1,86 @@
+/* src/sections/Contact.css */
+.contact {
+  padding: 4rem 2rem;
+  background: #1e1e1e;
+  color: #fff;
+  text-align: center;
+  position: relative; /* For positioning the line */
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px; /* Height of the purple line */
+  background: #f57f20; /* Purple color */
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-link {
+  font-size: 1.1rem;
+  color: #fff;
+  background: #0073b1;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  text-align: center;
+}
+
+.contact-link:hover {
+  background: #005582;
+  transform: translateY(-2px);
+}
+
+.contact-link:nth-child(2) {
+  background: #25d366;
+}
+
+.contact-link:nth-child(2):hover {
+  background: #1da851;
+}
+
+.contact-link.phone-number {
+  background: #333;
+  cursor: pointer;
+}
+
+.contact-link.phone-number:hover {
+  background: #555;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f57f20;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  z-index: 1000;
+}

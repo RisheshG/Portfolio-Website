@@ -1,0 +1,99 @@
+/* src/sections/Skills.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.skills {
+  padding: 4rem 2rem;
+  background: #1e1e1e; /* Dark background with a subtle gradient */
+  color: #e0e0e0; /* Light text color */
+  border-top: 2px solid #00bcd4; /* Border at the top for separation */
+}
+
+.skills h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #00e5ff; /* Bright cyan for heading */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill {
+  width: 80%;
+  margin: 20px 0;
+  text-align: left;
+  position: relative;
+  padding: 10px 20px;
+  background: #333;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #b0bec5;
+}
+
+.skill-bar {
+  background: #555; /* Darker background for bar container */
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 10px;
+  position: relative;
+}
+
+.skill-bar-inner {
+  background: linear-gradient(135deg, #00bcd4, #1de9b6); /* Tech blue gradient */
+  height: 25px;
+  width: 0;
+  border-radius: 10px;
+  transition: width 1.5s ease-out;
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.5);
+}
+
+.skill-bar-inner:hover {
+  background: linear-gradient(135deg, #1de9b6, #00bcd4); /* Reverse gradient on hover */
+  box-shadow: 0 6px 15px rgba(0, 188, 212, 0.7);
+  cursor: pointer;
+}
+
+.skill-header p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff; /* White for better readability */
+}
+
+.skill-header span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: #1de9b6; /* Matching color for skill level */
+}
+
+@media (max-width: 768px) {
+  .skill {
+    width: 100%;
+  }
+
+  .skills h2 {
+    font-size: 2.5rem;
+  }
+
+  .skill-header p {
+    font-size: 1rem;
+  }
+
+  .skill-header span {
+    font-size: 0.9rem;
+  }
+}
