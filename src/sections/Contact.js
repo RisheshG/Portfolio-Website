@@ -27,7 +27,7 @@ const Contact = () => {
         I'm always open to new opportunities and collaborations. Feel free to reach out through any of the following methods:
       </p>
       <div className="contact-options">
-        <a href="https://linkedin.com/in/your-profile" className="contact-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/rishesh-gangwar-bb7026241/" className="contact-link" target="_blank" rel="noopener noreferrer">
           LinkedIn
         </a>
         <a href="https://wa.me/9528506236" className="contact-link" target="_blank" rel="noopener noreferrer">
