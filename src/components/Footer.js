@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="footer-content">
         <p>&copy; {new Date().getFullYear()} Rishesh Gangwar. All rights reserved.</p>
         <div className="footer-links">
-          <a href="https://drive.google.com/file/d/12xavAWqXDH3oeoPqZ-iYifSlZStu-dvZ/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Resume</a>
+          <a href="https://www.canva.com/design/DAGPoNnC3gk/FyQNSsi_6Gq1yTHgYHdVhw/edit" target="_blank" rel="noopener noreferrer">Resume</a>
           <a href="https://github.com/RisheshG" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
